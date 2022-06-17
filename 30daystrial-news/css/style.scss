@@ -1,0 +1,333 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  a {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+
+// heading
+.heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  height: 77px;
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -44.43px;
+    left: 50%;
+    width: 76px;
+    height: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #3F51B5;
+  }
+}
+
+// text
+.title {
+  color: #6F7579;
+  font-weight: bold;
+}
+.text, 
+.sender, 
+.date {
+  color: #6F7579;
+  margin-bottom: 0;
+}
+.text {
+  overflow: hidden;
+}
+.text-red {
+  color: #FF0000;
+}
+.text-strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+.date {
+  width: 85px;
+}
+
+// color
+.bg-gray {
+  background-color: #999999;
+}
+.bg-saturday {
+  background-color: #5160EA;
+}
+.bg-sunday {
+  background-color: #EA5174;
+}
+.bg-lightgray {
+  background-color: #DDDDDD;
+}
+.bg-lightblue {
+  background-color: #B3C9E9;
+}
+.bg-pink {
+  background-color: #E99BAD;
+}
+.bg-white {
+  background-color: #FFFFFF;
+}
+  
+// paginate
+.paginate {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  .item {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      background-color: #3F51B5;
+      .link {
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+    }
+    &:not(.active) {
+      border: solid 1px #3F51B5;
+      .link {
+        color: #707070;
+      }
+    }
+  }
+}
+
+// More
+.more {
+  padding-top: 68px;
+  padding-bottom: 389px;
+  .container-fluid {
+    text-align: center;
+    .heading::before {
+      bottom: -34.5px;
+    }
+    .items {
+      max-width: 847px;
+      padding-right: 9px;
+      margin: 125px auto 57.5px;
+      text-align: left;
+      .item {
+        display: flex;
+        padding-bottom: 16.5px;
+        &:not(:first-child) {
+          padding-top: 18.5px;
+        }
+        &:not(:last-child) {
+          border-bottom: solid 1px #707070;
+        }
+        .date {
+          margin-left: 7.5px;
+          margin-right: 24px;
+        }
+        .text {
+          max-width: 576px;
+          line-height: 1.625;
+          margin-bottom: 0;
+        }
+        .more-button {
+          @include button(30px, 100px, 0, #3F51B5, 16px, bold, #FFFFFF);
+          margin-left: 36px;
+          margin-right: 9.5px;
+        }
+      }
+      .paginate {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+// Widget
+.widget {
+  padding-top: 68px;
+  padding-bottom: 480px;
+  .container-fluid {
+    .wrapper {
+      max-width: 1050px;
+      margin: 127px auto 0;
+      .widget-panel {
+        height: 345px;
+        max-width: 517px;
+        border: solid 1px #3F51B5;
+        border-radius: 4px;
+        &:nth-child(odd) {
+          margin-right: 16px;
+        }
+        .widget-head {
+          display: flex;
+          align-items: center;
+          height: 60px;
+          padding-left: 30px;
+          padding-right: 16px;
+          .widget-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 0;
+          }
+          .more-button {
+            @include button(30px, 100px, 2px, #FFFFFF, 16px, bold, #333333);
+            margin-right: 0;
+            margin-left: auto;
+          }
+        }
+        .notice-head {
+          background-color: #3F51B5;
+        }
+        .blog-head {
+          background-color: #B53F6E;
+        }
+        .items {
+          padding: 24px 18.5px 27px;
+          .item {
+            display: flex;
+            padding-bottom: 10.5px;
+            &:not(:first-child) {
+              padding-top: 28.5px;
+            }
+            &:not(:last-child) {
+              border-bottom: solid 1px #707070;
+            }
+            .item-head {
+              display: flex;
+              flex-direction: column;
+              .date {
+                margin-right: 24px;
+                margin-bottom: 4px;
+              }
+              .label {
+                @include label(24px, 60px, 2px, #FFA500, 16px, bold, #FFFFFF);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TB-Size
+@media (max-width: 991px) {
+
+  // More
+  .more {
+    .container-fluid {
+      .items {
+        .item {
+          flex-direction: column;
+          .more-button {
+            margin-left: auto;
+          }
+          .text {
+            max-width: none;
+            margin: 12px 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Widget
+  .widget {
+    .container-fluid {
+      .wrapper {
+        flex-direction: column;
+        .widget-panel {
+          height: auto;
+          max-width: 100%;
+          margin: 0 auto;
+          &:not(:last-child) {
+            margin-bottom: 32px;
+          }
+          &:nth-child(odd) {
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SP-Size
+@media (max-width: 575px) {
+
+}

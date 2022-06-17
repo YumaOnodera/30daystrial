@@ -1,0 +1,230 @@
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif !important;
+}
+
+.container-fluid {
+  padding: 0 24px !important;
+}
+
+.heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  height: 77px;
+  margin-bottom: 0;
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  bottom: -44.43px;
+  left: 50%;
+  width: 76px;
+  height: 5px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3F51B5;
+}
+
+.title {
+  color: #6F7579;
+  font-weight: bold;
+}
+
+.text,
+.sender,
+.date {
+  color: #6F7579;
+  margin-bottom: 0;
+}
+
+.text {
+  overflow: hidden;
+}
+
+.text-red {
+  color: #FF0000;
+}
+
+.text-strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.date {
+  width: 85px;
+}
+
+.contact {
+  padding-top: 68px;
+  padding-bottom: 103px;
+  background-color: #EFEFEF;
+}
+
+.contact .container-fluid .heading::before {
+  bottom: -34.5px;
+}
+
+.contact .container-fluid .contact-form {
+  max-width: 800px;
+  color: #333333;
+  background-color: #FFFFFF;
+  padding: 51.37px 47px 578px 47.5px;
+  margin: 85px auto 0;
+}
+
+.contact .container-fluid .contact-form .form-group {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.contact .container-fluid .contact-form .form-group label {
+  margin-bottom: 0;
+}
+
+.contact .container-fluid .contact-form .form-group .form-label-wrapper {
+  position: relative;
+  width: 177px;
+}
+
+.contact .container-fluid .contact-form .form-group .form-label-wrapper .form-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.contact .container-fluid .contact-form .form-group .form-label-wrapper .required-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22.72px;
+  width: 45.98px;
+  border-radius: 12px;
+  background-color: #E81919;
+  position: absolute;
+  bottom: -29.71px;
+  left: 4px;
+}
+
+.contact .container-fluid .contact-form .form-group .form-label-wrapper .required-label p {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper {
+  width: 528px;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper .form-control {
+  width: 100%;
+  border: solid 1px #707070;
+  padding-left: 16px;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper .form-control::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #CCCCCC;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper .form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #CCCCCC;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper .form-control::placeholder {
+  /* Others */
+  color: #CCCCCC;
+}
+
+.contact .container-fluid .contact-form .form-group .input-wrapper #name {
+  height: 60px;
+}
+
+.contact .container-fluid .contact-form .name-block,
+.contact .container-fluid .contact-form .file-block {
+  display: flex;
+}
+
+.contact .container-fluid .contact-form .name-block {
+  align-items: center;
+  margin-bottom: 56.28px;
+}
+
+.contact .container-fluid .contact-form .file-block {
+  padding-left: 4.5px;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper {
+  width: 529px;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper .file-label {
+  height: 39.69px;
+  width: 185px;
+  border-radius: 8px;
+  background: #3F51B5 !important;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper .notice {
+  margin-top: 14.31px;
+  margin-bottom: 16px;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper .resume-name-wrapper {
+  position: relative;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper .resume-name-wrapper .resume-name {
+  height: 38px;
+  width: 100% !important;
+  padding-left: 16px !important;
+  border: solid 1px #AAAAAA !important;
+  background-color: #DDDDDD !important;
+  color: #333333 !important;
+}
+
+.contact .container-fluid .contact-form .file-block .input-wrapper .resume-name-wrapper .cancel-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: url(../img/batsu.svg);
+}
+
+@media (max-width: 575px) {
+  .contact .container-fluid .contact-form {
+    padding: 24px 16px;
+  }
+  .contact .container-fluid .contact-form .form-group {
+    flex-direction: column;
+  }
+  .contact .container-fluid .contact-form .form-group .form-label-wrapper,
+  .contact .container-fluid .contact-form .form-group .input-wrapper {
+    width: 100%;
+  }
+  .contact .container-fluid .contact-form .form-group .form-label-wrapper {
+    margin-bottom: 8px;
+  }
+  .contact .container-fluid .contact-form .form-group .form-label-wrapper .required-label {
+    top: 50%;
+    left: 62px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .contact .container-fluid .contact-form .name-block {
+    margin-bottom: 32px;
+  }
+  .contact .container-fluid .contact-form .name-block .input-wrapper .form-control {
+    height: 40px !important;
+  }
+}

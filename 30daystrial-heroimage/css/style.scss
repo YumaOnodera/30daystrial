@@ -1,0 +1,246 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &:hover {
+          border-bottom: solid 3px $border-color;
+        }
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  a {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+
+// Navigation
+.navbar {
+  @include navbar-basic(100px, #3F51B5, #E81919);
+}
+.navbar-responsive {
+  display: none;
+}
+
+// Landing
+.landing {
+  background: url(../img/mainvisual.png) no-repeat center;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 100px);
+  .inner {
+    color: #333333;
+    .landing-message {
+        font-size: 68px;
+        font-weight: bold;
+        padding-top: 149px;
+        margin-bottom: 20px;
+    }
+    .lead-sentence {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 82px;
+    }
+    .contact-button {
+      @include button(83px, 390px, 12px, #3F51B5, 38px, bold, #FFFFFF);
+      box-shadow: 0 3px 6px lighten(#000000, 84%);
+      margin: 0 auto;
+    }
+  }
+}
+
+// TB-Size
+@media (max-width: 991px) {
+
+  // Navigation
+  .navbar {
+    display: none!important;
+  }
+  .navbar-responsive {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #3F51B5;
+    .navbar-brand {
+      margin-left: 16px;
+    }
+    .menu {
+      position: absolute;
+      height: 26px;
+      width: 34px;
+      padding: 0;
+      top: 50%;
+      right: 20.37px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 2;
+      .menu__line {
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: #FFFFFF;
+        transition:transform .3s;
+      }
+      .menu__line--top {
+        top: 0px;
+      }
+      .menu__line--center {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .menu__line--bottom {
+        bottom: 0;
+      }
+      .menu__line--top.active {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        transform: rotate(45deg);
+      }
+      .menu__line--center.active {
+        transform:scaleX(0);
+      }
+      .menu__line--bottom.active {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        transform: rotate(135deg);
+      }
+    }
+    .helo {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #3F51B5;
+      opacity: 0.8;
+      z-index: 1;
+      .navbar-nav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 200px;
+        .nav-item {
+          .nav-link {
+            height: 50px;
+            color: #FFFFFF;
+            padding-top: 15px;
+            padding-left: 20px;
+            &::after {
+              content: url(../img/arrow-w.svg);
+              position: absolute;
+              right: 21.5px; 
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Landing
+  .landing {
+    height: calc(100vh - 80px);
+    .inner {
+      .landing-message {
+        font-size: 48px;
+      }
+      .lead-sentence {
+        font-size: 32px;
+      }
+      .contact-button {
+        @include button(60px, 260px, 12px, #3F51B5, 22px, bold, #FFFFFF);
+      }
+    }
+  }
+}
+
+// SP-Size
+@media (max-width: 575px) {
+
+  // Navigation
+  .navbar-responsive {
+    height: 60px;
+  }
+
+  // Landing
+  .landing {
+    height: calc(100vh - 60px);
+    .inner {
+      .landing-message {
+        font-size: 32px;
+      }
+      .lead-sentence {
+        font-size: 26px;
+        margin-bottom: 48px;
+      }
+      .contact-button {
+        @include button(56px, 220px, 12px, #3F51B5, 18px, bold, #FFFFFF);
+      }
+    }
+  }
+}

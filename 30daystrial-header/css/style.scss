@@ -1,0 +1,322 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@mixin navbar-collapse($height, $bg-color) {
+  height: $height;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-left: 16px;
+  }
+  .navbar-toggler {
+    margin-right: 16px;
+  }
+  .navbar-collapse {
+    max-width: none;
+    .navbar-nav {
+      width: 100%;
+      background-color: $bg-color;
+      .nav-item {
+        padding: 12px 16px;
+        &:last-child {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+@mixin navbar-block($height, $width, $textalign, $border-color) {
+  height: $height;
+  .navbar-brand {
+    margin-left: 45px;
+  }
+  .navbar-nav {
+    margin-right: 139px;
+    .nav-item {
+      .nav-link {
+        height: $height;
+        width: $width;
+        line-height: $height;
+        text-align: $textalign;
+        margin-right: 0!important;
+        &.active {
+          line-height: $height - 10px;
+          border-bottom: none!important;
+          border-top: solid 5px $border-color;
+        }
+      }
+    }
+  }
+}
+
+@mixin navbar-global($height, $width, $textalign, $bg-color, $border-color) {
+  height: $height + 82px;
+  flex-direction: column!important;
+  .navbar-brand {
+    padding-top: 21px;
+    padding-bottom: 20px;
+    margin: 0;
+    .navbar-logo {
+      display: inline-block;
+      margin: auto 0;
+    }
+  }
+  .navbar-collapse {
+    height: $height + 2px;
+    width: 100%;
+    background-color: #FFFFFF;
+    .navbar-nav {
+      background-color: $bg-color;
+      margin: 0 auto;
+      .nav-item {
+        height: $height + 2px;
+        width: $width;
+        border-top: solid 1px #FFFFFF;
+        border-bottom: solid 1px #FFFFFF;
+        border-right: solid 1px #FFFFFF;
+        &:first-child {
+          border-left: solid 1px #FFFFFF;
+        }
+        .nav-link {
+          height: $height;
+          width: $width - 2px;
+          line-height: $height;
+          text-align: $textalign;
+          margin-right: 0!important;
+          &.active {
+            background-color: $border-color;
+          }
+        }
+        &:last-child {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  a {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+
+// Navigation
+.navbar {
+  @include navbar-basic(100px, #3F51B5, #E81919);
+}
+
+// Landing
+.landing {
+  background: url(../img/mainvisual.png) no-repeat center;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  .inner {
+    color: #333333;
+    .landing-message {
+        font-size: 68px;
+        font-weight: bold;
+        padding-top: 149px;
+        margin-bottom: 20px;
+    }
+    .lead-sentence {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 82px;
+    }
+    .contact-button {
+      @include button(83px, 390px, 12px, #3F51B5, 38px, bold, #FFFFFF);
+      box-shadow: 0 3px 6px lighten(#000000, 84%);
+      margin: 0 auto;
+    }
+  }
+}
+
+// PC-Size以上
+@media (min-width: 1200px) {
+
+  // Header-global
+  .header-global {
+    @include navbar-global(58px, 217px, center, #3F51B5, #E81919);
+  }
+}
+
+// PC-Size以上
+@media (min-width: 990px) {
+
+  // Header-block
+  .header-block {
+    @include navbar-block(100px, 100px, center, #E81919);
+  }
+  // Header-three-column
+  .header-three-column {
+    @include navbar-block(100px, 100px, center, #E81919);
+    .navbar-nav {
+      margin: 0 auto;
+    }
+    .phone-wrapper {
+      height: 100px;
+      padding-top: 12px;
+      margin-right: 151px;
+      font-size: 14px;
+      color: #FFFFFF;
+      .phone-button {
+        @include button(47.65px, 124px, 8px, #E81919, 18px, bold,#FFFFFF);
+        margin-bottom: 5.35px;
+      }
+    }
+  }
+  // Header-center
+  .header-center {
+    @include navbar-block(100px, 100px, center, #E81919);
+    & > .navbar-brand {
+      display: none;
+    }
+    .navbar-nav {
+      margin: 0 auto;
+      .nav-item {
+        .navbar-brand {
+          width: 200px;
+          margin-left: 50px;
+          margin-right: 50px!important;
+        }
+        &:first-child {
+          margin-left: 100px;
+        }
+      }
+    }
+  }
+}
+
+// PC-Size以下
+@media (max-width: 1199px) {
+
+  // Navigation
+  .header-global {
+    @include navbar-collapse(80px, #3F51B5);
+  }
+}
+
+// TB-Size以下
+@media (max-width: 991px) {
+
+  // Navigation
+  .navbar {
+    @include navbar-collapse(80px,#3F51B5);
+  }
+
+  // Header-three-column
+  .header-three-column {
+    .phone-wrapper {
+      display: none;
+    }
+  }
+  // Header-center
+  .header-center {
+    .navbar-nav {
+      .navbar-brand-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  // Landing
+  .landing {
+    height: calc(100vh - 80px);
+    .inner {
+      .landing-message {
+        font-size: 48px;
+      }
+      .lead-sentence {
+        font-size: 32px;
+      }
+      .contact-button {
+        @include button(60px, 260px, 12px, #3F51B5, 22px, bold, #FFFFFF);
+      }
+    }
+  }
+}
+
+// SP-Size以下
+@media (max-width: 545px) {
+
+  // Landing
+  .landing {
+    .inner {
+      .landing-message {
+        font-size: 32px;
+      }
+      .lead-sentence {
+        font-size: 26px;
+        margin-bottom: 48px;
+      }
+      .contact-button {
+        @include button(56px, 220px, 12px, #3F51B5, 18px, bold, #FFFFFF);
+      }
+    }
+  }
+}

@@ -1,0 +1,321 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &:hover {
+          border-bottom: solid 3px $border-color;
+        }
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+  
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+  
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  &:hover {
+    opacity: 0.9;
+  }
+  a {
+    position: relative;
+    height: $height;
+    width: $width;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $height;
+    color: $color;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+  
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+
+// heading
+.heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  height: 77px;
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -44.43px;
+    left: 50%;
+    width: 76px;
+    height: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #3F51B5;
+  }
+}
+
+// text
+.title {
+  color: #6F7579;
+  font-weight: bold;
+}
+.text, 
+.sender, 
+.date {
+  color: #6F7579;
+  margin-bottom: 0;
+}
+.text {
+  overflow: hidden;
+}
+.text-red {
+  color: #FF0000;
+}
+.text-strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+.date {
+  width: 85px;
+}
+
+// color
+.bg-gray {
+  background-color: #999999;
+}
+.bg-saturday {
+  background-color: #5160EA;
+}
+.bg-sunday {
+  background-color: #EA5174;
+}
+.bg-lightgray {
+  background-color: #DDDDDD;
+}
+.bg-lightblue {
+  background-color: #B3C9E9;
+}
+.bg-pink {
+  background-color: #E99BAD;
+}
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+// paginate
+.paginate {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  .item {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      background-color: #3F51B5;
+      .link {
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+    }
+    &:not(.active) {
+      border: solid 1px #3F51B5;
+      .link {
+        color: #707070;
+      }
+    }
+  }
+}
+
+// Q & A
+.qa {
+  padding-top: 62px;
+  padding-bottom: 76px;
+  background-color: #EEEEEE;
+  .container-fluid {
+    .items {
+      max-width: 904px;
+      margin: 138px auto 0;
+      .item {
+        .qa-mark,
+        .text {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+        .qa-mark {
+          font-weight: bold;
+        }
+        .question {
+          display: flex;
+          align-items: center;
+          height: 60px;
+          background-color: #3F51B5;
+          .qa-mark,
+          .text,
+          .toggle {
+            color: #FFFFFF;
+          }
+          .qa-mark {
+            margin-left: 22px;
+            margin-right: 19px;
+          }
+          .toggle {
+            margin-left: auto;
+            margin-right: 18.5px;
+            .minus-img {
+              display: none;
+            }
+          }
+        }
+        .answer {
+          display: none;
+          background-color: #FFFFFF;
+          padding: 24px 27px 18px 22px;
+          border: solid 1px #3F51B5;
+          .text,
+          .qa-mark {
+            color: #3F51B5;
+          }
+          .qa-mark {
+            margin-right: 21px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// About
+.about {
+  padding-top: 111px;
+  padding-bottom: 245px;
+  background-color: #DDDDDD;
+  .items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 896px;
+    margin: 0 auto;
+    .item {
+      .about-heading {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 444px;
+        background-color: #FFFFFF;
+        border: solid 1px #3F51B5;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-bottom: 23px;
+        font-size: 18px;
+        .text {
+          color: #3F51B5;
+        }
+        .toggle {
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          right: 29.37px;
+          .arrow-top {
+            display: none;
+          }
+        }
+      }
+      .description {
+        display: none;
+        width: 444px;
+        padding: 17px 28px 12px;
+        margin: 0 auto;
+        line-height: 2.125;
+        .text {
+          color: #3F51B5;
+        }
+      }
+    }
+  }
+}
+
+// TB-Size
+@media (max-width: 991px) {
+
+  // About
+  .about {
+    .items {
+      flex-direction: column;
+    }
+  }
+}
+
+// SP-Size
+@media (max-width: 575px) {
+
+    // About
+    .about {
+      .items {
+        flex-direction: column;
+        .item {
+          .about-heading,
+          .description {
+            width: 100%;
+          }
+        }
+      }
+    }
+}

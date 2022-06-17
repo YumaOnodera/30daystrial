@@ -1,0 +1,190 @@
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  &:hover {
+    opacity: 0.9;
+  }
+  a {
+    position: relative;
+    height: $height;
+    width: $width;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $height;
+    color: $color;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.container-fluid {
+  position: relative;
+  max-width: 750px;
+  padding: 94px 0 276px;
+  :not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  @include button(50px, 230px, 3px, #3F51B5, 16px, bold, #FFFFFF);
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    opacity: 1;
+  }
+  a {
+    text-align: left;
+    &:hover {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+  }
+}
+
+.button1 {
+  padding-left: 16px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.button2 {
+  padding-left: 16px;
+  &::after {
+    position: absolute;
+    right: 11.93px;
+    content: url(../img/arrow.svg);
+  }
+  &:hover {
+    background-color: #FFFFFF;
+    border: solid 1px #3F51B5;
+  }
+  a:hover {
+    color: #3F51B5;
+  }
+}
+
+.button3 {
+  padding-left: 16px;
+  &::after {
+    position: absolute;
+    right: 72.93px;
+    content: url(../img/arrow.svg);
+  }
+  &:hover {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.1875em);
+  }
+}
+
+.button4 {
+  padding-left: 35px;
+  box-shadow: 0 5px #25379B;
+  transition: all 1s linear 0s;
+  &:hover {
+    transform: rotateX(360deg);
+  }
+}
+
+.button5 {
+  padding-left: 35px;
+  background: linear-gradient(#3F51B5, #20295B);
+  transition: all 1s linear 0s;
+  &:hover {
+    transform: rotateY(360deg);
+  }
+}
+
+.bg-black {
+  height: 104px;
+  width: 100%;
+  background-color: #333333;
+  border: solid 1px #707070;
+  margin-top: 10px;
+  margin-bottom: 27px;
+  .button6 {
+    background-color: #333333;
+    padding-left: 35px;
+    border: solid 2px #FFFFFF;
+    margin-top: 26px;
+    margin-bottom: 28px;
+    transition: all 1s linear 0s;
+    &:hover {
+      transform: rotateZ(360deg);
+    }
+  }
+}
+
+.button7 {
+  height: 123px;
+  width: 123px;
+  padding: 38px 30px 38px 29px;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+  }
+  a {
+    height: auto;
+    width: 123px;
+    line-height: normal;
+  }
+}
+
+.button8 {
+  padding-left: 16px;
+  border-radius: 115px;
+  a:hover {
+    color: #4CAF50;
+  }
+  &::after {
+    position: absolute;
+    right: 11.93px;
+    content: url(../img/arrow.svg);
+  }
+}
+
+.button9 {
+    padding-left: 35px;
+    border-bottom: solid 3px #25379B;
+    border-radius: 0;
+    &:hover {
+      border-bottom-color: transparent;
+      transform: translateY(3px);
+    }
+}
+
+.button10 {
+  padding-left: 35px;
+  border-bottom: solid 3px #25379B;
+  border-radius: 0;
+  justify-content: left;
+  a {
+    height: auto;
+    width: auto;
+    line-height: normal;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #FFFFFF;
+      transition: all 0.3s ease 0s;
+    }
+    &:hover {
+      cursor: pointer;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

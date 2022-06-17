@@ -1,0 +1,279 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  a {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+
+// heading
+.heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  height: 77px;
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -44.43px;
+    left: 50%;
+    width: 76px;
+    height: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #3F51B5;
+  }
+}
+
+// text
+.title {
+  color: #6F7579;
+  font-weight: bold;
+}
+.text, 
+.sender, 
+.date {
+  color: #6F7579;
+  margin-bottom: 0;
+}
+.text {
+  overflow: hidden;
+}
+.text-red {
+  color: #FF0000;
+}
+.text-strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+.date {
+  width: 85px;
+}
+
+// color
+.bg-gray {
+  background-color: #999999;
+}
+.bg-saturday {
+  background-color: #5160EA;
+}
+.bg-sunday {
+  background-color: #EA5174;
+}
+.bg-lightgray {
+  background-color: #DDDDDD;
+}
+.bg-lightblue {
+  background-color: #B3C9E9;
+}
+.bg-pink {
+  background-color: #E99BAD;
+}
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+// paginate
+.paginate {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  .item {
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &.active {
+      background-color: #3F51B5;
+      .link {
+        color: #FFFFFF;
+        font-weight: bold;
+      }
+    }
+    &:not(.active) {
+      border: solid 1px #3F51B5;
+      .link {
+        color: #707070;
+      }
+    }
+  }
+}
+
+// Time
+.time {
+  background-color: #EFEFEF;
+  padding-top: 60px;
+  padding-bottom: 122px;
+  .container-fluid {
+    .heading::before {
+      bottom: -34.5px;
+    }
+    .wrapper {
+      margin-top: 116px;
+      .schedule {
+        margin: 0 auto;
+        &:not(:last-child) {
+          margin-bottom: 56px; 
+        }
+        th, td {
+          height: 48px;
+          width: 80px;
+          color: #333333;
+          border: solid 1px #707070;
+          text-align: center;
+        }
+        .tb-head {
+          color: #FFFFFF!important;
+          font-weight: bold;
+        }
+        .tb-wide {
+          width: 160px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// No Border
+.no-border {
+  background-color: #EFEFEF;
+  padding-top: 60px;
+  padding-bottom: 387px;
+  .container-fluid {
+    .heading::before {
+      bottom: -34.5px;
+    }
+    .property {
+      margin: 77px auto 0;
+      th, td {
+        height: 68px;
+        width: 171px;
+        color: #333333;
+        &:not(.tb-head) {
+          padding-left: 16px;
+        }
+      }
+      .tb-head {
+        font-weight: bold;
+        text-align: center;
+      }
+      .tb-wide {
+        width: 160px;
+        font-weight: bold;
+      }
+      .tb-interval-right {
+        border-right: solid 2px #EFEFEF;
+      }
+      .tb-interval-bottom {
+        border-bottom: solid 2px #EFEFEF;
+      }
+    }
+  }
+}
+
+// video
+.video {
+  padding-top: 68px;
+  padding-bottom: 136.05px;
+  .content {
+    max-width: 800px;
+    text-align: center;
+    margin: 139.43px auto 0;
+    .movie-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 0;
+      padding-bottom: 56.25%;
+      .movie {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// TB-Size
+@media (max-width: 991px) {
+
+}
+
+// SP-Size
+@media (max-width: 575px) {
+
+}

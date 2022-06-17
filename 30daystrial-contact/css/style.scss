@@ -1,0 +1,263 @@
+@mixin navbar-basic($height, $bg-color, $border-color) {
+  height: $height;
+  background-color: $bg-color;
+  padding: 0!important;
+  .navbar-brand {
+    margin-left: 140px;
+  }
+  .navbar-nav {
+    margin-right: 140px;
+    .nav-item {
+      .nav-link {
+        display: inline-block;
+        color: #FFFFFF;
+        padding: 0;
+        &.active {
+          border-bottom: solid 3px $border-color;
+        }
+      }
+      &:not(:last-child) {
+        .nav-link {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+  
+@mixin label($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  p {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    margin-bottom: 0;
+  }
+}
+  
+@mixin button($height, $width, $radius, $bg-color, $font-size, $font-weight, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+  background-color: $bg-color;
+  a {
+    position: relative;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-decoration: none;
+  }
+}
+  
+body {
+  font-family: "Lato", "Noto Sans JP", sans-serif!important;
+  // font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif!important;
+}
+
+.container-fluid {
+  padding: 0 24px!important;
+}
+  
+// heading
+.heading {
+  position: relative;
+  font-size: 60px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  height: 77px;
+  margin-bottom: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -44.43px;
+    left: 50%;
+    width: 76px;
+    height: 5px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #3F51B5;
+  }
+}
+  
+// text
+.title {
+  color: #6F7579;
+  font-weight: bold;
+}
+.text, 
+.sender, 
+.date {
+  color: #6F7579;
+  margin-bottom: 0;
+}
+.text {
+  overflow: hidden;
+}
+.text-red {
+  color: #FF0000;
+}
+.text-strong {
+  font-size: 22px;
+  font-weight: bold;
+}
+.date {
+  width: 85px;
+}
+
+.contact {
+  padding-top: 68px;
+  padding-bottom: 103px;
+  background-color: #EFEFEF;
+  .container-fluid {
+    .heading::before {
+      bottom: -34.5px;
+    }
+    .contact-form {
+      max-width: 800px;
+      color: #333333;
+      background-color: #FFFFFF;
+      padding: 51.37px 47px 578px 47.5px;
+      margin: 85px auto 0;
+      .form-group {
+        margin-bottom: 0;
+        position: relative;
+        label {
+          margin-bottom: 0;
+        }
+        .form-label-wrapper {
+          position: relative;
+          width: 177px;
+          .form-label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+          }
+          .required-label {
+            @include label(22.72px, 45.98px, 12px, #E81919, 14px, bold, #FFFFFF);
+            position: absolute;
+            bottom: -29.71px;
+            left: 4px;
+          }
+        }
+        .input-wrapper {
+          width: 528px;
+          .form-control {
+            width: 100%;
+            border: solid 1px #707070;
+            padding-left: 16px;
+            &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+              color:#CCCCCC;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+              color:#CCCCCC;
+            }
+            &::placeholder{ /* Others */
+            color:#CCCCCC
+            }
+          }
+          #name {
+            height: 60px;
+          }
+        }
+      }
+      .name-block,
+      .file-block {
+        display: flex;
+      }
+      .name-block {
+        align-items: center;
+        margin-bottom: 56.28px;
+      }
+      .file-block {
+        padding-left: 4.5px;
+        .input-wrapper {
+          width: 529px;
+          .file-label {
+            height: 39.69px;
+            width: 185px;
+            border-radius: 8px;
+            background: #3F51B5!important;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+          }
+          .notice {
+            margin-top: 14.31px;
+            margin-bottom: 16px;
+          }
+          .resume-name-wrapper {
+            position: relative;
+            .resume-name {
+              height: 38px;
+              width: 100%!important;
+              padding-left: 16px!important;
+              border: solid 1px #AAAAAA!important;
+              background-color: #DDDDDD!important;
+              color: #333333!important;
+            }
+            .cancel-btn {
+              display: none;
+              position: absolute;
+              top: 50%;
+              right: 15px;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              content: url(../img/batsu.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TB-Size
+@media (max-width: 991px) {
+
+}
+
+// SP-Size
+@media (max-width: 575px) {
+  .contact {
+    .container-fluid {
+      .contact-form {
+        padding: 24px 16px;
+        .form-group {
+          flex-direction: column;
+          .form-label-wrapper,
+          .input-wrapper {
+            width: 100%;
+          }
+          .form-label-wrapper {
+            margin-bottom: 8px;
+            .required-label {
+              top: 50%;
+              left: 62px;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+            }
+          }
+        }
+        .name-block {
+          margin-bottom: 32px;
+          .input-wrapper {
+            .form-control {
+              height: 40px!important;
+            }    
+          }
+        }
+      }
+    }
+  }
+}

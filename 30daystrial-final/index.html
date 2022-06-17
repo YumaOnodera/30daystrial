@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Campany</title>
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <!-- WOW CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- hiraku CSS -->
+    <link rel="stylesheet" href="css/hiraku.min.css">
+    <!-- other CSS -->
+    <link rel="stylesheet" href="css/form.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="drawer drawer--right">
+    <!-- ヘッダー -->
+    <header role="banner">
+        <!-- デスクトップメニュー -->
+        <nav class="nav" role="navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#service" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#results" class="nav-link">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#price" class="nav-link">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#comments" class="nav-link">Comments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#qa" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- モバイルブランドロゴ -->
+        <div class="brand-logo">
+            <img src="img/logo.png" alt="ブランドロゴ">
+        </div>
+        <!-- ハンバーガーボタン -->
+        <button type="button" class="hiraku-open-btn" id="offcanvas-btn-right" data-toggle-offcanvas="#js-hiraku-offcanvas-1" aria-expanded="false">
+            <!-- <span class="hiraku-open-btn-line"></span> -->
+            <img class="open-btn" src="img/hamburger.svg" alt="ハンバーガーボタン">
+            <img class="close-btn" src="img/batsu.svg" alt="閉じるボタン">
+        </button>
+        <!-- モバイルメニュー -->
+        <nav class="mobile-nav offcanvas-right" role="navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">News</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#service" class="nav-link">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a  href="#results" class="nav-link">Results</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#qa" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#price" class="nav-link">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#comments" class="nav-link">Comments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- メインビジュアル -->
+    <section class="main-visual">
+        <div class="container-fluid">
+            <div class="inner">
+                <h1 class="message">詩が生れて、画が出来る。<br>とかくに人の世は住みにくい。</h1>
+                <p class="sub-message">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                <div class="contact-btn">
+                    <a href="#contact">お問い合わせしてみる</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ニュース -->
+    <section id="news" class="news">
+        <div class="container-fluid">
+            <div class="news-card wow fadeInUp" data-wow-duration="2s">
+                <h1 class="heading">News</h1>
+                <div class="items">
+                    <div class="item">
+                        <p class="date">2019-02-01</p>
+                        <div class="label">
+                            <p>テキスト</p>
+                        </div>
+                        <p class="text">ニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュースニュース</p>
+                    </div>
+                    <div class="item">
+                        <p class="date">2019-02-01</p>
+                        <div class="label">
+                            <p>テキスト</p>
+                        </div>
+                        <p class="text">ニュースニュースニュースニュースニュースニュースニュース</p>
+                    </div>
+                    <div class="item">
+                        <p class="date">2019-02-01</p>
+                        <div class="label">
+                            <p>テキスト</p>
+                        </div>
+                        <p class="text">ニュースニュースニュースニュースニュースニュースニュース</p>
+                    </div>
+                </div>
+                <div class="more-btn">
+                    <a href="#">MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- サービス -->
+    <section id="service" class="service">
+        <div class="bg-black">
+            <h1 class="heading custom-text">Service</h1>
+            <div class="service-card wow fadeInUp" data-wow-duration="2s">
+                <div class="items">
+                    <div class="item">
+                        <img class="service-img" src="img/service1.svg" alt="サービス画像1">
+                        <h2 class="sub-heading">WEB<br>DESIGN</h2>
+                        <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                    </div>
+                    <div class="item">
+                        <img class="service-img" src="img/service2.svg" alt="サービス画像">
+                        <h2 class="sub-heading">WEB<br>CODING</h2>
+                        <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                    </div>
+                    <div class="item">
+                        <img class="service-img" src="img/service3.svg" alt="サービス画像3">
+                        <h2 class="sub-heading">CMS<br>CUSTOMIZE</h2>
+                        <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- リザルト -->
+    <section id="results" class="results">
+        <div class="bg-black">
+            <h1 class="heading custom-text">Results</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像1">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像2">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像3">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像4">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像5">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="slide-img" src="img/slide1.png" alt="スライド画像6">
+                        <div class="contents">
+                            <h2 class="sub-heading">とかくに人の世は住みにくい。</h2>
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて 、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="more-btn">
+                <a href="#">VIEW ALL</a>
+            </div>
+        </div>
+    </section>
+    <!-- 価格表 -->
+    <section id="price" class="price wow fadeInUp" data-wow-duration="2s">
+        <div class="container-fluid">
+            <h1 class="heading">Price</h1>
+            <div class="price-table-wrapper">
+                <table class="items">
+                    <tr class="item">
+                        <th class="price-heading text">row 1</th>
+                        <th class="contents text custom-text">Price ￥10,000</th>
+                    </tr>
+                    <tr class="item">
+                        <th class="price-heading text">row 2</th>
+                        <th class="contents text custom-text">Price ￥10,000</th>
+                    </tr>
+                    <tr class="item">
+                        <th class="price-heading text">row 3</th>
+                        <th class="contents text custom-text">Price ￥10,000</th>
+                    </tr>
+                </table>
+                <p class="text">※ 上記料金はサンプルです。</p>
+            </div>
+        </div>
+    </section>
+    <!-- お客様の声 -->
+    <section id="comments" class="comments">
+        <div class="bg-black">
+            <div class="container-fluid">
+                <div class="comments-card wow slideInRight" data-wow-duration="2s">
+                    <h1 class="heading">Comments</h1>
+                    <div class="items">
+                        <div class="item">
+                            <img class="comments-img" src="img/comments1.png" alt="お客様の声1">
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                        <div class="item">
+                            <img class="comments-img" src="img/comments2.png" alt="お客様の声2">
+                            <p class="text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。意地を通せば窮屈だ。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="comments-bg-img wow slideInRight" data-wow-duration="2s" src="img/comments3.png" alt="お客様の声画像">
+    </section>
+    <!-- Q & A -->
+    <section id="qa" class="qa">
+        <div class="container-fluid">
+            <h1 class="heading">Q&A</h1>
+            <div class="items">
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？<br>また、質問は質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="question">
+                        <div class="q-mark">
+                            <p>Q</p>
+                        </div>
+                        <p class="text">質問質問質問？</p>
+                        <img class="toggle-open" src="img/plus.svg" alt="開くボタン">
+                        <img class="toggle-close" src="img/minus.svg" alt="閉じるボタン">
+                    </div>
+                    <div class="answer">
+                        <p class="text">回答回答回答回答回答回答回答回答回答回答回答回答</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- アクセス -->
+    <section id="access" class="access">
+        <div class="bg-black">
+            <div class="container-fluid">
+                <div class="inner">
+                    <h1 class="heading custom-text">Access</h1>
+                    <p class="text custom-text">〒106-6126<br>東京都港区六本木 6丁目 10-1<br>六本木ヒルズ森タワー</p>
+                    <!-- モバイル表示用 -->
+                    <div class="google-map-wrapper-movile-disp">
+                        <iframe class="google-map wow slideInRight" data-wow-duration="2s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2045.772358052071!2d139.72791214282339!3d35.6603823470061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b770913970d%3A0xccc3467fcb15b353!2zR29vZ2xl5ZCI5ZCM5Lya56S-!5e0!3m2!1sja!2sjp!4v1563108873769!5m2!1sja!2sjp" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="map-btn">
+                        <a href="#">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="google-map-wrapper">
+            <iframe class="google-map wow slideInRight" data-wow-duration="2s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2045.772358052071!2d139.72791214282339!3d35.6603823470061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b770913970d%3A0xccc3467fcb15b353!2zR29vZ2xl5ZCI5ZCM5Lya56S-!5e0!3m2!1sja!2sjp!4v1563108873769!5m2!1sja!2sjp" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- お問い合わせ -->
+    <section id="contact" class="contact">
+        <div class="container-fluid">
+            <div class="contact-form">
+                <div class="contact-header">
+                    <div class="inner">
+                        <h1 class="heading custom-text">Contact Us</h1>
+                        <p class="text custom-text">どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。</p>
+                    </div>
+                </div>
+                <form class="form" action="confirm.php" method="post">
+                    <div class="form-group contact-type-wrapper">
+                        <label class="form-label">お問い合わせ種別</label>
+                        <select name="contact-type" id="contact-type" class="form-control contact-type">
+                            <option value="" selected disabled style="display: none">選択してください</option>
+                            <option value="business">事業内容について</option>
+                            <option value="product">商品について</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group name-wrapper">
+                        <label class="form-label">氏名</label>
+                        <div class="required-label">
+                            <p>必須</p>
+                        </div>
+                        <input name="name" id="name" type="text" class="form-control name" placeholder="氏名" required>
+                    </div>
+                    <div class="form-group kana-wrapper">
+                        <label class="form-label">フリガナ</label>
+                        <div class="required-label">
+                            <p>必須</p>
+                        </div>
+                        <input name="kana" id="kana" type="text" class="form-control kana" placeholder="フリガナ" required>
+                    </div>
+                    <div class="form-group mail-wrapper">
+                        <label class="form-label">メールアドレス</label>
+                        <input name="mail" id="mail" type="text" class="form-control mail" placeholder="sample@gmail.com">
+                    </div>
+                    <div class="form-group sex-wrapper">
+                        <label class="form-label">性別</label>
+                        <div class="input-sex-wrapper">
+                            <label><input name="sex" id="male" type="radio" value="male" class="sex male"><span>男性</span></label>
+                            <label><input name="sex" id="female" type="radio" value="female" class="sex female"><span>女性</span></label>
+                        </div>
+                    </div>
+                    <div class="form-group message-wrapper">
+                        <label class="form-label">メッセージ</label>
+                        <textarea name="message" id="message" rows="4" class="form-control message"></textarea>
+                    </div>
+                    <div class="form-group privacy-policy-wrapper">
+                        <label><input id="privacy-policy" type="checkbox" name="privacy-policy" value="agree" class="privacy-policy"><span>個人情報保護方針に同意する</span></label>
+                    </div>
+                    <div class="submit-btn">
+                        <a href="#">送信する</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- フッター -->
+    <footer class="bg-black">
+        <div class="footer-left">
+            <div class="sns-links">
+                <a href="#" class="sns-link custom-text"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="sns-link custom-text"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <nav class="nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-text">サイトマップ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-text">個人情報保護方針</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-text">プライバシーポリシー</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <h1 class="bland-logo custom-text">HANIWAMAN Corp.</h1>
+            <p class="copy custom-text">© Haniwaman Landing page Sample.</p>
+        </div>
+        <a href="#" class="totop"><img src="img/totop.svg" alt="トップに戻る"></a>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- WOW JS -->
+    <script src="js/wow.min.js"></script>
+    <!-- hiraku JS -->
+    <script src="js/hiraku.min.js"></script>
+    <!-- Other JS -->
+    <script src="js/slide.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

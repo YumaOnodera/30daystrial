@@ -1,0 +1,159 @@
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  color: #333333;
+}
+
+.heading {
+  position: relative;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 80px;
+  background-color: #1e73be;
+  bottom: -16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.sub-heading {
+  position: relative;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.sub-heading::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 3px;
+  background-color: #1e73be;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mb-75 {
+  margin-bottom: 75px;
+}
+
+.introduction,
+.summary {
+  max-width: 800px;
+  padding: 0 16px;
+  margin: 40px auto 0;
+}
+
+.introduction .content,
+.summary .content {
+  text-align: center;
+}
+
+.introduction .content .description,
+.summary .content .description {
+  text-align: left;
+}
+
+.works {
+  max-width: 800px;
+  padding: 0 12px;
+  margin: 60px auto 0;
+}
+
+.works .content {
+  text-align: center;
+}
+
+.works .content:not(:last-child) {
+  padding-bottom: 40px;
+}
+
+.works .content .product-img-wrapper {
+  transition: 0.4s;
+}
+
+.works .content .product-img-wrapper:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.works .content .product-img-wrapper .product-img {
+  height: auto;
+  width: 100%;
+}
+
+.works .content .description {
+  text-align: left;
+}
+
+.contact {
+  margin: 60px auto 60px;
+}
+
+.contact .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: #1e73be;
+  outline: none;
+  margin: 0 auto;
+}
+
+.contact .btn:hover {
+  opacity: 0.9;
+}
+
+.contact .btn a {
+  height: 48px;
+  width: 200px;
+  font-weight: bold;
+  line-height: 48px;
+  color: white;
+  text-align: center;
+}
+
+.contact .btn a:hover {
+  text-decoration: none;
+}
+
+footer {
+  max-width: 400px;
+  margin: 0 auto 60px;
+}
+
+footer .copy {
+  color: lightgray;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .product-img {
+    height: 195px;
+    width: 300px;
+  }
+}

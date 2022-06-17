@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Campany</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container-fluid">
+            <h1 class="heading">Contact</h1>
+            <div class="contact-form">
+                <form class="form" action="confirm.php" method="post">
+                    <div class="form-group name-block">
+                        <div class="form-label-wrapper">
+                            <label class="form-label">お名前</label>
+                            <div class="required-label">
+                                <p>必須</p>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input name="name" id="name" type="text" class="form-control" placeholder="山田太郎" required>
+                        </div>
+                    </div>
+                    <div class="form-group file-block">
+                        <div class="form-label-wrapper">
+                            <label class="form-label">履歴書</label>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="file-label" id="file-label" for="resume">ファイルを選択</label><input type="file" id="resume" accept=".pdf">
+                            <p class="notice">※ ○MB以下<br>※ pdfのみ</p>
+                            <div class="resume-name-wrapper">
+                                <input class="resume-name" type="text" id="resume-name" disabled>
+                                <img id="cancel-btn" class="cancel-btn" src="img/batsu.svg" alt="batsu">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/reset.js"></script>
+</body>
+
+</html>
